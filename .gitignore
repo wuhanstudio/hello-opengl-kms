@@ -1,6 +1,6 @@
 *.o
 *.so
-glsl
+main
 
 __pycache__/
 .venv

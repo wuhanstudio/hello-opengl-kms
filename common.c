@@ -388,7 +388,7 @@ int init_egl_modifiers(struct egl *egl, const struct drm *drm,
 	return 0;
 }
 
-const struct egl * init_egl(const struct gbm *gbm, uint64_t modifier, bool surfaceless)
+struct egl * init_egl(const struct gbm *gbm, uint64_t modifier, bool surfaceless)
 {
 	EGLint major, minor;
 

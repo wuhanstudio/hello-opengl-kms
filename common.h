@@ -183,7 +183,7 @@ static inline int __egl_check(void *ptr, const char *name)
 
 #define egl_check(egl, name) __egl_check((egl)->name, #name)
 
-const struct egl * init_egl(const struct gbm *gbm, uint64_t modifier, bool surfaceless);
+struct egl * init_egl(const struct gbm *gbm, uint64_t modifier, bool surfaceless);
 
 int create_program(const char *vs_src, const char *fs_src);
 int link_program(unsigned program);

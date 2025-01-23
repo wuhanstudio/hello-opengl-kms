@@ -34,7 +34,9 @@
 
 #include "lease.h"
 
-static const struct egl *egl;
+#define UNUSED(x) (void)(x)
+
+static struct egl *egl;
 static const struct gbm *gbm;
 static const struct drm *drm;
 
@@ -113,14 +115,12 @@ int main(int argc, char *argv[]) {
 			.mode = "",
 	};
 
-	int ret;
-
 	shadertoy = argv[1];
-
-	ret = init(shadertoy, &options);
+	int ret = init(shadertoy, &options);
 	if (ret < 0) {
 		return -1;
 	}
+	UNUSED(argc);
 
 	return drm->run(gbm, egl);
 }
