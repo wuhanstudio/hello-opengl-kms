@@ -4,6 +4,8 @@ A minimal example of OpenGL fragment shaders, using the [DRM/KMS Linux kernel su
 
 It runs shaders fullscreen, and does not require any windowing system, like X or Wayland.
 
+![](demo.gif)
+
 ## Build
 
 ```shell
